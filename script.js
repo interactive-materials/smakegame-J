@@ -44,8 +44,8 @@ function setup() {
     keyReceived(e.key);
   });
 
-  document.querySelector("body").addEventListener("click", (e) => {
-    clickReceived(e);
+  document.querySelector("body").addEventListener("touchstart", (e) => {
+    clickReceived(e.touches[0]);
   });
 
   drawBG();
